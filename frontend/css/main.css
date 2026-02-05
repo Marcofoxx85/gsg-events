@@ -313,6 +313,19 @@ h3 {
     object-fit: cover;
     opacity: 0;
     transition: opacity 1s ease-in;
+    /* NUKE PLAY BUTTON & CONTROLS */
+    pointer-events: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Hide all native video controls */
+.hero-video::-webkit-media-controls,
+.hero-video::-webkit-media-controls-start-playback-button,
+.hero-video::-webkit-media-controls-play-button {
+    display: none !important;
+    -webkit-appearance: none;
+    opacity: 0;
 }
 
 .hero-video.loaded {
