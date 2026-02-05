@@ -1,0 +1,137 @@
+/* COMPACT MOBILE SIZING - Add to main.css at end */
+
+@media (max-width: 768px) {
+
+    /* Hero - Smaller */
+    .hero {
+        min-height: 60vh !important;
+    }
+
+    .hero-title {
+        font-size: 2.25rem !important;
+    }
+
+    /* Featured Event - Compact */
+    .featured-image {
+        height: 180px !important;
+    }
+
+    .featured-info {
+        padding: 1rem !important;
+    }
+
+    .featured-title {
+        font-size: 1.5rem !important;
+    }
+
+    /* Event Cards - Much Smaller */
+    .event-card-image {
+        height: 150px !important;
+    }
+
+    .event-card-content {
+        padding: 0.9rem !important;
+    }
+
+    .event-card-date {
+        padding: 0.5rem !important;
+        width: 45px !important;
+        height: 55px !important;
+    }
+
+    .date-day {
+        font-size: 1.4rem !important;
+    }
+
+    .date-month {
+        font-size: 0.65rem !important;
+    }
+
+    .event-card-title {
+        font-size: 1.05rem !important;
+    }
+
+    .event-card-venue {
+        font-size: 0.8rem !important;
+    }
+
+    /* Artist Cards - Smaller */
+    .artist-image {
+        width: 110px !important;
+        height: 110px !important;
+    }
+
+    .artist-name {
+        font-size: 1.1rem !important;
+    }
+
+    /* Venue Cards - Compact */
+    .venue-image {
+        height: 150px !important;
+    }
+
+    .venue-info {
+        padding: 0.9rem !important;
+    }
+
+    .venue-name {
+        font-size: 1.1rem !important;
+    }
+
+    /* Past Events - Smaller */
+    .past-event-image {
+        height: 130px !important;
+    }
+
+    /* Section Spacing - Tighter */
+    section {
+        padding: 2.5rem 0 !important;
+    }
+
+    .section-title {
+        font-size: 1.75rem !important;
+        margin-bottom: 0.85rem !important;
+    }
+
+    /* Grids - Less Gap */
+    .events-grid,
+    .venues-grid,
+    .past-events-grid {
+        gap: 1.15rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 55vh !important;
+    }
+
+    .hero-title {
+        font-size: 1.9rem !important;
+    }
+
+    .featured-image,
+    .event-card-image,
+    .venue-image {
+        height: 130px !important;
+    }
+
+    .artist-image {
+        width: 95px !important;
+        height: 95px !important;
+    }
+
+    .past-event-image {
+        height: 110px !important;
+    }
+
+    section {
+        padding: 2rem 0 !important;
+    }
+
+    .events-grid,
+    .venues-grid,
+    .past-events-grid {
+        gap: 1rem !important;
+    }
+}
