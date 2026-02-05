@@ -460,6 +460,45 @@
     </footer>
 
     <script src="js/main.js"></script>
+
+    <script>
+        // Progressive Video Loading & Mobile Fix
+        document.addEventListener('DOMContentLoaded', function () {
+            const video = document.getElementById('heroVideo');
+
+            if (video) {
+                // Start video hidden, show poster
+                video.style.opacity = '0';
+
+                // Force play on mobile devices
+                const playVideo = () => {
+                    video.play().catch(err => {
+                        console.log('Autoplay prevented:', err);
+                    });
+                };
+
+                // When video can play smoothly
+                video.addEventListener('canplay', function () {
+                    // Fade in video over poster
+                    video.style.opacity = '1';
+                    playVideo();
+                }, { once: true });
+
+                // Try to play immediately
+                playVideo();
+
+                // Mobile interaction fallback - play on first touch/click
+                const handleInteraction = () => {
+                    playVideo();
+                    document.removeEventListener('touchstart', handleInteraction);
+                    document.removeEventListener('click', handleInteraction);
+                };
+
+                document.addEventListener('touchstart', handleInteraction);
+                document.addEventListener('click', handleInteraction);
+            }
+        });
+    </script>
 </body>
 
 </html>
