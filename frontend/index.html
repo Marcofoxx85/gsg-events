@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Glasgow Sound Gallery - Underground techno and electronic music events in Glasgow">
+    <title>Glasgow Sound Gallery | GSG Events</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo-circle">
+                    <span class="logo-text">GSG</span>
+                </div>
+                <span class="brand-name">GLASGOW SOUND GALLERY</span>
+            </div>
+            <div class="nav-links">
+                <a href="#events" class="nav-link">EVENTS</a>
+                <a href="#artists" class="nav-link">ARTISTS</a>
+                <a href="#about" class="nav-link">ABOUT</a>
+                <a href="login.html" class="nav-link">LOGIN</a>
+                <a href="booking.html" class="btn-primary">GET TICKETS</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title glitch" data-text="GLASGOW SOUND GALLERY">GLASGOW SOUND GALLERY</h1>
+            <p class="hero-subtitle">UNDERGROUND TECHNO & ELECTRONIC MUSIC EVENTS</p>
+            <div class="hero-cta">
+                <a href="#events" class="btn-neon">UPCOMING EVENTS</a>
+                <a href="#about" class="btn-outline">LEARN MORE</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>SCROLL</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Featured Event -->
+    <section class="featured-event">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">NEXT EVENT</span>
+                <h2 class="section-title">FEATURED</h2>
+            </div>
+            <div class="featured-card">
+                <div class="featured-image">
+                    <img src="assets/images/placeholder-event.jpg" alt="Featured Event">
+                    <div class="featured-badge">SELLING FAST</div>
+                </div>
+                <div class="featured-info">
+                    <div class="event-date">
+                        <span class="date-day">29</span>
+                        <span class="date-month">MAR</span>
+                    </div>
+                    <div class="event-details">
+                        <h3 class="event-title">GLASGOW SOUND GALLERY</h3>
+                        <p class="event-subtitle">THE BUFF CLUB</p>
+                        <div class="event-lineup">
+                            <span class="lineup-label">LINEUP:</span>
+                            <span class="lineup-artists">BURNA DRUMA • FABIAN • MCMSTR</span>
+                        </div>
+                        <div class="event-meta">
+                            <span class="meta-item">🕐 23:00 - 03:00</span>
+                            <span class="meta-item">📍 Glasgow, UK</span>
+                            <span class="meta-item">🎫 £15 - £25</span>
+                        </div>
+                        <a href="event.html?id=1" class="btn-primary btn-large">VIEW EVENT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advertisement Placeholder -->
+    <section class="ad-section">
+        <div class="container">
+            <div class="ad-placeholder">
+                <span class="ad-label">SPONSORED</span>
+                <div class="ad-content">
+                    <!-- Ad content here -->
+                    <p>ADVERTISEMENT SPACE</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section id="events" class="events-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">WHAT'S ON</span>
+                <h2 class="section-title">UPCOMING EVENTS</h2>
+            </div>
+
+            <!-- Filters -->
+            <div class="event-filters">
+                <button class="filter-btn active" data-filter="all">ALL</button>
+                <button class="filter-btn" data-filter="techno">TECHNO</button>
+                <button class="filter-btn" data-filter="house">HOUSE</button>
+                <button class="filter-btn" data-filter="dnb">D&B</button>
+            </div>
+
+            <!-- Events Grid -->
+            <div class="events-grid" id="events-grid">
+                <!-- Event cards will be dynamically loaded here -->
+                <div class="event-card" data-category="techno">
+                    <div class="event-card-image">
+                        <img src="assets/images/placeholder-event.jpg" alt="Event">
+                        <div class="event-card-overlay">
+                            <a href="event.html?id=1" class="btn-outline-white">VIEW DETAILS</a>
+                        </div>
+                    </div>
+                    <div class="event-card-content">
+                        <div class="event-card-date">
+                            <span class="date-day">12</span>
+                            <span class="date-month">APR</span>
+                        </div>
+                        <h3 class="event-card-title">NICK'S NIGHT 6.11</h3>
+                        <p class="event-card-venue">THE BERKELEY SUITE</p>
+                        <div class="event-card-footer">
+                            <span class="event-price">FROM £12</span>
+                            <span class="event-status available">AVAILABLE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card" data-category="techno">
+                    <div class="event-card-image">
+                        <img src="assets/images/placeholder-event.jpg" alt="Event">
+                        <div class="event-card-overlay">
+                            <a href="event.html?id=2" class="btn-outline-white">VIEW DETAILS</a>
+                        </div>
+                    </div>
+                    <div class="event-card-content">
+                        <div class="event-card-date">
+                            <span class="date-day">19</span>
+                            <span class="date-month">APR</span>
+                        </div>
+                        <h3 class="event-card-title">MCMSTR INVITES</h3>
+                        <p class="event-card-venue">THE BUFF CLUB</p>
+                        <div class="event-card-footer">
+                            <span class="event-price">FROM £15</span>
+                            <span class="event-status selling-fast">SELLING FAST</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card" data-category="house">
+                    <div class="event-card-image">
+                        <img src="assets/images/placeholder-event.jpg" alt="Event">
+                        <div class="event-card-overlay">
+                            <a href="event.html?id=3" class="btn-outline-white">VIEW DETAILS</a>
+                        </div>
+                    </div>
+                    <div class="event-card-content">
+                        <div class="event-card-date">
+                            <span class="date-day">26</span>
+                            <span class="date-month">APR</span>
+                        </div>
+                        <h3 class="event-card-title">FISH 02</h3>
+                        <p class="event-card-venue">SUBCLUB</p>
+                        <div class="event-card-footer">
+                            <span class="event-price">FROM £18</span>
+                            <span class="event-status available">AVAILABLE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advertisement Placeholder -->
+    <section class="ad-section">
+        <div class="container">
+            <div class="ad-placeholder ad-horizontal">
+                <span class="ad-label">SPONSORED</span>
+                <div class="ad-content">
+                    <!-- Ad content here -->
+                    <p>ADVERTISEMENT SPACE - HORIZONTAL BANNER</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artists Section -->
+    <section id="artists" class="artists-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">TALENT</span>
+                <h2 class="section-title">FEATURED ARTISTS</h2>
+            </div>
+            <div class="artists-carousel">
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <img src="assets/images/placeholder-artist.jpg" alt="Artist">
+                    </div>
+                    <h3 class="artist-name">BURNA DRUMA</h3>
+                    <p class="artist-genre">TECHNO</p>
+                </div>
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <img src="assets/images/placeholder-artist.jpg" alt="Artist">
+                    </div>
+                    <h3 class="artist-name">FABIAN</h3>
+                    <p class="artist-genre">TECHNO / HOUSE</p>
+                </div>
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <img src="assets/images/placeholder-artist.jpg" alt="Artist">
+                    </div>
+                    <h3 class="artist-name">MCMSTR</h3>
+                    <p class="artist-genre">TECHNO</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <span class="section-tag">WHO WE ARE</span>
+                    <h2 class="section-title">GLASGOW SOUND GALLERY</h2>
+                    <p class="about-description">
+                        Glasgow Sound Gallery is the city's premier underground electronic music collective,
+                        bringing the finest techno, house, and electronic sounds to Glasgow's most iconic venues.
+                        We champion local talent while hosting international acts, creating unforgettable experiences
+                        for the city's vibrant music community.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">40+</span>
+                            <span class="stat-label">EVENTS</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">1.6K</span>
+                            <span class="stat-label">FOLLOWERS</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">922</span>
+                            <span class="stat-label">FOLLOWING</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="assets/images/placeholder-about.jpg" alt="GSG Events">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2 class="newsletter-title">STAY IN THE LOOP</h2>
+                <p class="newsletter-subtitle">Get early access to tickets and exclusive updates</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="YOUR EMAIL" class="newsletter-input" required>
+                    <button type="submit" class="btn-neon">SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo-circle">
+                        <span class="logo-text">GSG</span>
+                    </div>
+                    <p class="footer-tagline">GLASGOW'S FINEST UNDERGROUND EVENTS</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>EVENTS</h4>
+                        <a href="#events">Upcoming</a>
+                        <a href="#events">Past Events</a>
+                        <a href="#artists">Artists</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>INFO</h4>
+                        <a href="#about">About</a>
+                        <a href="#">Contact</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>FOLLOW</h4>
+                        <a href="https://instagram.com/gsgevents_" target="_blank">Instagram</a>
+                        <a href="https://ra.co/events/2314881" target="_blank">Resident Advisor</a>
+                        <a href="#">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Glasgow Sound Gallery. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

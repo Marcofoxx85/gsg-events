@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: gsg-backend
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - DATABASE_URL=postgresql://gsg:gsgpassword@db:5432/gsgevents
+      - SECRET_KEY=supersecretkey
+    depends_on:
+      - db
+    networks:
+      - gsg-network
+
+  # Simple frontend server using nginx to serve static files
+  frontend:
+    image: nginx:alpine
+    container_name: gsg-frontend
+    ports:
+      - "3001:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html
+    networks:
+      - gsg-network
+
+  db:
+    image: postgres:15-alpine
+    container_name: gsg-db
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_USER=gsg
+      - POSTGRES_PASSWORD=gsgpassword
+      - POSTGRES_DB=gsgevents
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - gsg-network
+
+networks:
+  gsg-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

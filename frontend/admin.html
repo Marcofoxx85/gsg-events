@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin Dashboard - Glasgow Sound Gallery">
+    <title>Admin Dashboard | GSG Events</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="admin-page">
+    <!-- Admin Navigation -->
+    <nav class="admin-navbar">
+        <div class="admin-nav-brand">
+            <div class="logo-circle">
+                <span class="logo-text">GSG</span>
+            </div>
+            <span class="brand-name">ADMIN PANEL</span>
+        </div>
+        <div class="admin-nav-actions">
+            <span class="admin-user">👤 Admin User</span>
+            <a href="index.html" class="btn-outline-small">VIEW SITE</a>
+            <button class="btn-outline-small" id="logout-btn">LOGOUT</button>
+        </div>
+    </nav>
+
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <nav class="admin-menu">
+                <a href="#dashboard" class="admin-menu-item active">
+                    <span class="menu-icon">📊</span>
+                    <span>DASHBOARD</span>
+                </a>
+                <a href="#events" class="admin-menu-item">
+                    <span class="menu-icon">🎫</span>
+                    <span>EVENTS</span>
+                </a>
+                <a href="#bookings" class="admin-menu-item">
+                    <span class="menu-icon">🎟️</span>
+                    <span>BOOKINGS</span>
+                </a>
+                <a href="#artists" class="admin-menu-item">
+                    <span class="menu-icon">🎵</span>
+                    <span>ARTISTS</span>
+                </a>
+                <a href="#venues" class="admin-menu-item">
+                    <span class="menu-icon">📍</span>
+                    <span>VENUES</span>
+                </a>
+                <a href="#users" class="admin-menu-item">
+                    <span class="menu-icon">👥</span>
+                    <span>USERS</span>
+                </a>
+                <a href="#analytics" class="admin-menu-item">
+                    <span class="menu-icon">📈</span>
+                    <span>ANALYTICS</span>
+                </a>
+                <a href="#settings" class="admin-menu-item">
+                    <span class="menu-icon">⚙️</span>
+                    <span>SETTINGS</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Dashboard Section -->
+            <section class="admin-section" id="dashboard-section">
+                <div class="admin-header">
+                    <h1 class="admin-title">DASHBOARD</h1>
+                    <button class="btn-neon">+ CREATE EVENT</button>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">🎫</div>
+                        <div class="stat-content">
+                            <span class="stat-label">TOTAL EVENTS</span>
+                            <span class="stat-value">42</span>
+                            <span class="stat-change positive">+5 this month</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-content">
+                            <span class="stat-label">REVENUE</span>
+                            <span class="stat-value">£24,580</span>
+                            <span class="stat-change positive">+12% vs last month</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎟️</div>
+                        <div class="stat-content">
+                            <span class="stat-label">TICKETS SOLD</span>
+                            <span class="stat-value">1,247</span>
+                            <span class="stat-change positive">+234 this week</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-content">
+                            <span class="stat-label">TOTAL USERS</span>
+                            <span class="stat-value">3,892</span>
+                            <span class="stat-change positive">+156 this month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="admin-card">
+                    <h2 class="card-title">RECENT BOOKINGS</h2>
+                    <div class="table-container">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>BOOKING ID</th>
+                                    <th>EVENT</th>
+                                    <th>CUSTOMER</th>
+                                    <th>TICKETS</th>
+                                    <th>AMOUNT</th>
+                                    <th>STATUS</th>
+                                    <th>ACTIONS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#BK-1247</td>
+                                    <td>Glasgow Sound Gallery</td>
+                                    <td>John Smith</td>
+                                    <td>2x General</td>
+                                    <td>£40.00</td>
+                                    <td><span class="status-badge confirmed">CONFIRMED</span></td>
+                                    <td>
+                                        <button class="action-btn">VIEW</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#BK-1246</td>
+                                    <td>MCMSTR Invites</td>
+                                    <td>Sarah Jones</td>
+                                    <td>1x VIP</td>
+                                    <td>£35.00</td>
+                                    <td><span class="status-badge confirmed">CONFIRMED</span></td>
+                                    <td>
+                                        <button class="action-btn">VIEW</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#BK-1245</td>
+                                    <td>Nick's Night 6.11</td>
+                                    <td>Mike Wilson</td>
+                                    <td>4x General</td>
+                                    <td>£48.00</td>
+                                    <td><span class="status-badge pending">PENDING</span></td>
+                                    <td>
+                                        <button class="action-btn">VIEW</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Upcoming Events -->
+                <div class="admin-card">
+                    <h2 class="card-title">UPCOMING EVENTS</h2>
+                    <div class="events-list">
+                        <div class="event-item">
+                            <div class="event-item-image">
+                                <img src="assets/images/placeholder-event.jpg" alt="Event">
+                            </div>
+                            <div class="event-item-info">
+                                <h3>GLASGOW SOUND GALLERY</h3>
+                                <p>29 MAR 2026 • THE BUFF CLUB</p>
+                            </div>
+                            <div class="event-item-stats">
+                                <span>234/500 tickets sold</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 47%"></div>
+                                </div>
+                            </div>
+                            <div class="event-item-actions">
+                                <button class="btn-outline-small">EDIT</button>
+                                <button class="btn-outline-small">VIEW</button>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-item-image">
+                                <img src="assets/images/placeholder-event.jpg" alt="Event">
+                            </div>
+                            <div class="event-item-info">
+                                <h3>MCMSTR INVITES</h3>
+                                <p>19 APR 2026 • THE BUFF CLUB</p>
+                            </div>
+                            <div class="event-item-stats">
+                                <span>412/500 tickets sold</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 82%"></div>
+                                </div>
+                            </div>
+                            <div class="event-item-actions">
+                                <button class="btn-outline-small">EDIT</button>
+                                <button class="btn-outline-small">VIEW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Events Management Section (Hidden by default) -->
+            <section class="admin-section hidden" id="events-section">
+                <div class="admin-header">
+                    <h1 class="admin-title">EVENTS MANAGEMENT</h1>
+                    <button class="btn-neon">+ CREATE EVENT</button>
+                </div>
+
+                <!-- Event Creation Form -->
+                <div class="admin-card">
+                    <h2 class="card-title">CREATE NEW EVENT</h2>
+                    <form class="admin-form" id="create-event-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>EVENT TITLE *</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label>VENUE *</label>
+                                <select required>
+                                    <option>Select venue</option>
+                                    <option>The Buff Club</option>
+                                    <option>The Berkeley Suite</option>
+                                    <option>Subclub</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>DATE *</label>
+                                <input type="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label>START TIME *</label>
+                                <input type="time" required>
+                            </div>
+                            <div class="form-group">
+                                <label>END TIME *</label>
+                                <input type="time" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>DESCRIPTION *</label>
+                            <textarea rows="4" required></textarea>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>EARLY BIRD PRICE</label>
+                                <input type="number" placeholder="£">
+                            </div>
+                            <div class="form-group">
+                                <label>GENERAL ADMISSION *</label>
+                                <input type="number" placeholder="£" required>
+                            </div>
+                            <div class="form-group">
+                                <label>VIP PRICE</label>
+                                <input type="number" placeholder="£">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>CAPACITY *</label>
+                            <input type="number" required>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-neon">CREATE EVENT</button>
+                            <button type="button" class="btn-outline">CANCEL</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

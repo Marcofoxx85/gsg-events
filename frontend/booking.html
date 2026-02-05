@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book Tickets - Glasgow Sound Gallery">
+    <title>Book Tickets | GSG Events</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo-circle">
+                    <span class="logo-text">GSG</span>
+                </div>
+                <span class="brand-name">GLASGOW SOUND GALLERY</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">HOME</a>
+                <a href="index.html#events" class="nav-link">EVENTS</a>
+                <a href="login.html" class="nav-link">LOGIN</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Header -->
+    <section class="booking-header">
+        <div class="container">
+            <div class="booking-progress">
+                <div class="progress-step active">
+                    <div class="progress-circle">1</div>
+                    <span class="progress-label">SELECT TICKETS</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <div class="progress-circle">2</div>
+                    <span class="progress-label">YOUR DETAILS</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <div class="progress-circle">3</div>
+                    <span class="progress-label">PAYMENT</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Content -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-grid">
+                <!-- Booking Form -->
+                <div class="booking-form-container">
+                    <!-- Event Summary -->
+                    <div class="booking-event-summary">
+                        <div class="event-summary-image">
+                            <img src="assets/images/placeholder-event.jpg" alt="Event">
+                        </div>
+                        <div class="event-summary-info">
+                            <h2 class="event-summary-title">GLASGOW SOUND GALLERY</h2>
+                            <p class="event-summary-venue">THE BUFF CLUB</p>
+                            <p class="event-summary-date">29 MARCH 2026 • 23:00 - 03:00</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 1: Select Tickets -->
+                    <div class="booking-step" id="step-1">
+                        <h3 class="booking-step-title">SELECT YOUR TICKETS</h3>
+
+                        <div class="ticket-selection">
+                            <div class="ticket-type-card">
+                                <div class="ticket-type-header">
+                                    <div class="ticket-type-info">
+                                        <h4 class="ticket-type-name">EARLY BIRD</h4>
+                                        <p class="ticket-type-description">Limited early bird tickets</p>
+                                    </div>
+                                    <div class="ticket-type-price">£15</div>
+                                </div>
+                                <div class="ticket-type-footer">
+                                    <span class="ticket-type-status sold-out">SOLD OUT</span>
+                                </div>
+                            </div>
+
+                            <div class="ticket-type-card">
+                                <div class="ticket-type-header">
+                                    <div class="ticket-type-info">
+                                        <h4 class="ticket-type-name">GENERAL ADMISSION</h4>
+                                        <p class="ticket-type-description">Standard entry ticket</p>
+                                    </div>
+                                    <div class="ticket-type-price">£20</div>
+                                </div>
+                                <div class="ticket-type-footer">
+                                    <div class="ticket-quantity">
+                                        <button class="qty-btn" data-action="decrease" data-ticket="general">-</button>
+                                        <input type="number" class="qty-input" id="qty-general" value="0" min="0"
+                                            max="10" readonly>
+                                        <button class="qty-btn" data-action="increase" data-ticket="general">+</button>
+                                    </div>
+                                    <span class="ticket-type-status available">234 AVAILABLE</span>
+                                </div>
+                            </div>
+
+                            <div class="ticket-type-card">
+                                <div class="ticket-type-header">
+                                    <div class="ticket-type-info">
+                                        <h4 class="ticket-type-name">VIP</h4>
+                                        <p class="ticket-type-description">VIP entry + fast track + drink voucher</p>
+                                    </div>
+                                    <div class="ticket-type-price">£35</div>
+                                </div>
+                                <div class="ticket-type-footer">
+                                    <div class="ticket-quantity">
+                                        <button class="qty-btn" data-action="decrease" data-ticket="vip">-</button>
+                                        <input type="number" class="qty-input" id="qty-vip" value="0" min="0" max="10"
+                                            readonly>
+                                        <button class="qty-btn" data-action="increase" data-ticket="vip">+</button>
+                                    </div>
+                                    <span class="ticket-type-status available">45 AVAILABLE</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn-neon btn-block" id="continue-to-details">CONTINUE</button>
+                    </div>
+
+                    <!-- Step 2: Your Details -->
+                    <div class="booking-step hidden" id="step-2">
+                        <h3 class="booking-step-title">YOUR DETAILS</h3>
+
+                        <form class="booking-details-form" id="details-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">FIRST NAME *</label>
+                                    <input type="text" id="first-name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">LAST NAME *</label>
+                                    <input type="text" id="last-name" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">EMAIL *</label>
+                                <input type="email" id="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">PHONE NUMBER *</label>
+                                <input type="tel" id="phone" required>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter">
+                                    <span>Subscribe to GSG newsletter for exclusive updates</span>
+                                </label>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="terms" required>
+                                    <span>I agree to the <a href="#">Terms & Conditions</a> *</span>
+                                </label>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn-outline" id="back-to-tickets">BACK</button>
+                                <button type="submit" class="btn-neon">CONTINUE TO PAYMENT</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Step 3: Payment -->
+                    <div class="booking-step hidden" id="step-3">
+                        <h3 class="booking-step-title">PAYMENT</h3>
+
+                        <div class="payment-container">
+                            <div class="payment-methods">
+                                <button class="payment-method-btn active" data-method="card">
+                                    <span>💳</span> CARD
+                                </button>
+                                <button class="payment-method-btn" data-method="paypal">
+                                    <span>🅿️</span> PAYPAL
+                                </button>
+                            </div>
+
+                            <form class="payment-form" id="payment-form">
+                                <div class="form-group">
+                                    <label for="card-number">CARD NUMBER *</label>
+                                    <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiry">EXPIRY DATE *</label>
+                                        <input type="text" id="expiry" placeholder="MM/YY" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV *</label>
+                                        <input type="text" id="cvv" placeholder="123" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="card-name">NAME ON CARD *</label>
+                                    <input type="text" id="card-name" required>
+                                </div>
+
+                                <div class="payment-security">
+                                    <span>🔒</span> Secure payment powered by Stripe
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="button" class="btn-outline" id="back-to-details">BACK</button>
+                                    <button type="submit" class="btn-neon">COMPLETE BOOKING</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary Sidebar -->
+                <div class="order-summary">
+                    <h3 class="summary-title">ORDER SUMMARY</h3>
+
+                    <div class="summary-items" id="summary-items">
+                        <p class="summary-empty">No tickets selected</p>
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-fees">
+                        <div class="fee-item">
+                            <span>Subtotal</span>
+                            <span id="subtotal">£0.00</span>
+                        </div>
+                        <div class="fee-item">
+                            <span>Booking Fee</span>
+                            <span id="booking-fee">£0.00</span>
+                        </div>
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-total">
+                        <span>TOTAL</span>
+                        <span id="total">£0.00</span>
+                    </div>
+
+                    <!-- Advertisement Placeholder -->
+                    <div class="ad-placeholder ad-sidebar">
+                        <span class="ad-label">SPONSORED</span>
+                        <div class="ad-content">
+                            <p>AD SPACE</p>
+                        </div>
+                    </div>
+
+                    <div class="summary-info">
+                        <p>✓ Instant email confirmation</p>
+                        <p>✓ Mobile tickets with QR code</p>
+                        <p>✓ Secure payment</p>
+                        <p>✓ Free cancellation up to 24h before event</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo-circle">
+                        <span class="logo-text">GSG</span>
+                    </div>
+                    <p class="footer-tagline">GLASGOW'S FINEST UNDERGROUND EVENTS</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>EVENTS</h4>
+                        <a href="index.html#events">Upcoming</a>
+                        <a href="index.html#events">Past Events</a>
+                        <a href="index.html#artists">Artists</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>INFO</h4>
+                        <a href="index.html#about">About</a>
+                        <a href="#">Contact</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>FOLLOW</h4>
+                        <a href="https://instagram.com/gsgevents_" target="_blank">Instagram</a>
+                        <a href="https://ra.co/events/2314881" target="_blank">Resident Advisor</a>
+                        <a href="#">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Glasgow Sound Gallery. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
