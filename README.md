@@ -31,4 +31,12 @@ A god-tier, production-ready events management platform built for the undergroun
 ## 📁 File Structure
 - `/frontend` - All static assets, HTML, CSS, JS
 - `/backend` - FastAPI application source code
-- `docker-compose.yml` - Infrastructure orchestration
+
+## 🚁 Deployment
+
+Deploy to Railway with a single command:
+```bash
+railway up
+```
+
+See `RAILWAY_DEPLOY_GUIDE.md` for detailed instructions.
